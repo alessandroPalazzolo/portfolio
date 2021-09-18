@@ -1,0 +1,39 @@
+.bash-portrait {
+   position: relative;
+   height: fit-content;
+   width: 100%;
+   max-height: 86vh;
+   font-family: 'Consolas';
+   font-size: .5em;
+   border-radius: 4px;
+   color: rgb(0,0,0);
+   white-space: nowrap; 
+   display: flex;
+   align-items: flex-start;
+   flex-direction: column;
+   overflow-y: hidden;
+   overflow-x: visible;
+   margin: 1em auto;
+   margin-left: 3em;
+   letter-spacing: -.05em;
+
+   .bash-portrait__ln {
+      .bash-portrait__content {
+         background-color: rgba(255,255,255,.8);
+         box-shadow: 0px 0px 5em 2px rgb(10,10,10);
+
+         &:hover {
+            cursor: pointer;
+            white-space: nowrap;
+            color: white;
+            background-color: black;
+            opacity: .5;
+         }
+      }
+
+      .bash-portrait__bg {
+         color: transparent;
+         background-color: transparent;
+      }
+   }   
+}

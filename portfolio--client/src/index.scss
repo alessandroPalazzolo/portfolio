@@ -1,0 +1,41 @@
+@font-face {
+   font-family: bldStdFont;
+   src: url("./shared/assets/fonts/momcake/MomcakeBold-WyonA.otf");
+}
+
+@font-face {
+   font-family: thinStdFont;
+   src: url("./shared/assets/fonts/momcake/MomcakeThin-9Y6aZ.otf");
+}
+
+@font-face {
+   font-family: bashFont;
+   src: url("./shared/assets/fonts/Modeseven.ttf");
+}
+
+html {
+   font-size: 10px;
+   overflow: auto;
+   overscroll-behavior: none;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   overflow: hidden;
+   overscroll-behavior: none;
+}
+
+button {
+   background: none;
+   border: none;
+
+   &:focus {
+      outline: none;
+   }
+}
+
+::-webkit-scrollbar {
+   width: 0;
+}

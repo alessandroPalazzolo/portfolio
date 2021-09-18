@@ -1,0 +1,44 @@
+@media only screen and(max-width: 1024px){
+   .contact__bg {
+      background: url("../../shared/assets/images/contact-bg--mobile.jpeg") no-repeat;
+      background-size: cover;
+      background-position-x: center;
+      background-position-y: center;
+      width: 105vw;
+      height: 105vh;
+      top: 0 !important;
+   }
+   .contact__birds--2 {
+      height: 8rem;
+      width: 8rem;
+   }
+   .contact__leaves {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      height: 100%;
+      width: 100vw;
+   }
+   .contact__msg {
+      display: none !important;
+   }
+   .contact__footer {
+      position: relative !important;
+      top: 0 !important;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+
+      .contact__footer__icons {
+         margin: 1.5rem 0;
+         stroke: white;
+
+         &:hover {
+            margin-bottom: default;
+         }
+      }
+   }
+   .contact__hand--right, .contact__hand--left {
+      display: none !important;
+   }
+}

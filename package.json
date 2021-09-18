@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "root portfolio-fs",
+  "main": "portfolio--server/index.js",
+  "scripts": {
+    "start": "node portfolio--server/index.js",
+    "dev": "cd portfolio--server && npm run live-dev",
+    "build": "npm run build-server && npm run build-client",
+    "build-server": "cd portfolio--server && npm i",
+    "build-client": "cd portfolio--client && npm i && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alessandro Palazzolo",
+  "license": "ISC"
+}

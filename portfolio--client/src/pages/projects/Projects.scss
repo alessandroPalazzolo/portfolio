@@ -1,0 +1,81 @@
+$projBgCcolor: rgb(12,12,12);
+
+@keyframes shiftData {
+   50% {
+      transform: translate(25em);
+   }
+   100% {
+      transform: translate(0em);
+   }
+}
+
+@keyframes scrollIndMv {
+    50% { transform: translateY(-.5em) }
+   100% { transform: translateY(0em) }
+}
+
+.projects-wrapper {
+   position: fixed;
+   width: 100vw;
+   background-color: $projBgCcolor;
+   font-size: 14px;
+   overflow: scroll;
+
+   .page-progression {
+      position: fixed;
+      width: 2em;
+      bottom: 0;
+      right: 2em;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+
+      .progression__step {
+         height: .6em;
+         width: .6em;
+         border-radius: 50%;
+         background-color: rgb(100,100,100);
+         transition: transform .6s ease-out, background-color .6s ease-out, border-radius .6s ease-out;
+      }
+
+      .progression__step--focus {
+         border-radius: 30%;
+         transform: scale(1.5);
+         background-color: white;
+         box-shadow: 0px 0px 5px 1px rgb(100,100,100);
+      }
+
+      .progression__path {
+         height: 5em;
+         width: 1px;
+         background-color: rgb(50,50,50);
+      }
+   }
+
+   .projects-footer {
+      position: fixed;
+      bottom: 1em;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+
+      .proj__scroll-indicator {
+         position: absolute;
+         left: 2em;
+      }
+
+      .scroll-indicator--anim {
+         animation: scrollIndMv 1s linear infinite;
+      }
+
+      .scroll-indicator--end {
+         transform: rotate(180deg);
+         stroke: rgb(150,150,150);
+      }
+   }
+}

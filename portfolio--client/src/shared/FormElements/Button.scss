@@ -1,0 +1,46 @@
+$link-color: #9E6257;
+
+.link-btn {
+   width: fit-content;
+   height: fit-content;
+   font-family: Roboto;
+   font-size: 1.6rem;
+   color: white;
+   text-decoration: none;
+   letter-spacing: 3px;
+   transition: letter-spacing 1s, color .2s;
+   z-index: 100;
+
+   &:hover {
+      cursor: pointer;
+      letter-spacing: 0px; 
+   }
+
+   &:focus {
+      color: $link-color;
+   }
+}
+
+.link-btn--menu {
+   position: relative;
+   top: -1.35rem;
+   font-size: 1.6rem;
+   padding: 5px;
+}
+
+.link-btn--contact {
+   position: absolute;
+   bottom: 2rem;
+   left: 4rem;
+   color: white;
+}
+
+.external-link-btn, .button-btn {
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+}
+
+.external-link-btn--contact {
+   margin: 0 2.5em;
+}

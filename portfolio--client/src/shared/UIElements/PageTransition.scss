@@ -1,0 +1,99 @@
+@keyframes exitPage {
+   from { transform: translateX(100vw); }
+   to { transform: translateX(0); }
+}
+
+@keyframes enterPage {
+   from { transform: translateX(0vw); }
+   to { transform: translateX(-100vw); }
+}
+
+.page-transition__wrapper {
+   position: fixed;
+   width: 100vw;
+   height: 100vh;
+   padding-bottom: 3rem;
+   box-sizing: border-box;
+   transform: translateX(0vw);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   z-index: 100000;
+   background-color: rgb(20, 20, 20);
+}
+
+.page-transition__txt {
+   width: 50%;
+   height: fit-content;
+   white-space: wrap;
+   margin: 0;
+   padding: 0;
+}
+
+.txt--label {
+   color: rgb(100,100,100);
+   font-family: "Roboto";
+   letter-spacing: -1px;
+   text-align: left;
+   font-size: 3rem;
+   margin-bottom: 4rem;
+   filter: blur(1px);
+   border-right: 1px solid white;
+   background: rgba(255,255,255,.2);
+}
+
+.txt--msg {
+   font-family: bldStdFont;
+   white-space: wrap;
+   word-break: break-all;
+   font-size: 10rem;
+   letter-spacing: -2px;
+   color: rgb(255,255,255);
+   text-shadow: 
+      10px 10px rgb(100,100,100),
+      -10px -10px rgb(80,80,80),
+      10px -10px rgb(60,60,60),
+      -10px 10px rgb(40,40,40)
+   ;
+   text-align: center;
+   border-bottom: 1px solid white;
+
+   &:before {
+      position: absolute;
+      content: attr(init);
+      text-shadow: none;
+      color: rgb(30, 30, 30);
+      font-size: 80rem;
+      filter: blur(1px);
+      z-index: -1;
+      transform: translate(-5rem, -40%);
+      border-left: 1px solid rgb(40,40,40);
+   }
+}
+
+.page-transition__wrapper--enter {
+   animation: enterPage .2s ease-in;
+   transform: translateX(-150vw);
+}
+
+.page-transition__wrapper--exit {
+   animation: exitPage .2s ease-out;
+   transform: translateX(0);
+}
+
+
+@media only screen and (max-width: 600px) {
+   .txt--label {
+      font-size: 2rem;
+   }
+
+   .txt--msg {
+      font-size: 5rem;
+
+      &::before {
+         font-size: 45rem;
+         border: none;
+      }
+   }
+}

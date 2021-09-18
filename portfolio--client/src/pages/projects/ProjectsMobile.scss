@@ -1,0 +1,15 @@
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+   .projects-wrapper {
+      font-size: 17px;
+   }
+}
+
+@media only screen and (max-width: 1024px) {
+   .projects-wrapper {
+      .projects-footer {
+         padding: 1em 0;
+         bottom: 0;
+         background: linear-gradient(0deg, rgba(12,12,12,1) 20%, rgba(0,0,0,0) 120%);
+      }
+   }
+}

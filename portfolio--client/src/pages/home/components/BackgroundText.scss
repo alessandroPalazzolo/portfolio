@@ -1,0 +1,109 @@
+@keyframes grain {
+   0% { transform:translate(0, 0) } 
+   10% { transform:translate(-5%, -10%) }
+   20% { transform:translate(-15%, 5%) }
+   30% { transform:translate(7%, -25%) }
+   40% { transform:translate(-5%, 25%) }
+   50% { transform:translate(-15%, 10%) }
+   60% { transform:translate(15%, 0%) }
+   70% { transform:translate(0%, 15%) }
+   80% { transform:translate(3%, 30%) }
+   90% { transform:translate(-10%, 10%); }
+   100% { transform:translate(0, 0) }
+ }
+
+@keyframes phase {
+   0% {
+     opacity: .8; }
+   25% {
+     opacity: 0.2; }
+   50% {
+     opacity: 0.4; }
+   75% {
+     opacity: 0.2; }
+   100% {
+     opacity: .8; } 
+}
+
+.bgtext-wrapper {
+   position: absolute;
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   overflow: hidden;
+   background-color: transparent;
+   transition: background-color 1s;
+   pointer-events: auto !important;
+   z-index: 10;
+   background-color: rgba(255,255,255,.05);
+
+   &:after {
+      animation: grain 10s steps(10) infinite;
+      background-image: url("../../../shared/assets/images/noise.png");
+      content: "";
+      height: 300%;
+      left: -50%;
+      opacity: .9;
+      position: fixed;
+      top: -100%;
+      width: 300%;
+      z-index: 10;
+   } 
+}
+
+@media only screen and (max-width: 1024px) {
+   .bgtext-wrapper {
+      display: none;
+   }
+}
+
+@media only screen and (min-height: 800px) and (max-height: 899px){
+   .bgtext-wrapper {
+      font-size: 14px !important;
+   }
+}
+
+@media only screen and (min-height: 900px) and (max-height: 999px){
+   .bgtext-wrapper {
+      font-size: 15.5px !important;
+   }
+}
+
+@media only screen and (min-height: 1000px) and (max-height: 1099px){
+   .bgtext-wrapper {
+      font-size: 18px !important;
+   }
+}
+
+@media only screen and (min-height: 1100px) and (max-height: 1199px){
+   .bgtext-wrapper {
+      font-size: 19.5px !important;
+   }
+}
+
+@media only screen and (min-height: 1200px) and (max-height: 1299px){
+   .bgtext-wrapper {
+      font-size: 21.5px !important;
+   }
+}
+
+@media only screen and (min-height: 1300px) and (max-height: 1399px){
+   .bgtext-wrapper {
+      font-size: 23.5px !important;
+   }
+}
+
+@media only screen and (min-height: 1400px) and (max-height: 1499px){
+   .bgtext-wrapper {
+      font-size: 23px !important;
+   }
+}
+
+@media only screen and (min-height: 1500px){
+   .bgtext-wrapper {
+      font-size: 26.6px !important;
+   }
+}

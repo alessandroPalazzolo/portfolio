@@ -1,0 +1,38 @@
+.audio-back:hover {
+   cursor: pointer;
+}
+
+.audio-back--home {
+   margin: 2.5em 0;
+   z-index: 100;
+}
+
+.audio-back--skills {
+   position: fixed;
+   right: 3.2rem;
+   bottom: 2.56rem;
+   z-index: 10;
+}
+
+.audio-back--contact {
+   position: absolute;
+   right: 4rem;
+   bottom: 1.5rem;
+   stroke: white;
+}
+
+.audio-back--projects {
+   position: absolute;
+   right: 2em;
+}
+
+.audio-back--radio {
+   stroke: transparent;
+}
+
+@media only screen and (max-width: 1024px) {
+   .audio-back--home {
+      margin: -1.5em 0;
+      z-index: 100;
+   }
+}
